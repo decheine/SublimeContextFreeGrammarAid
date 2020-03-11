@@ -1,0 +1,92 @@
+[
+	// TODO: Transfer snippets from this file to .sublime-snippet files, and call them
+	{"keys": ["alt+shift+f"], "command": "reindent", "args": {"single_line": false}},
+	{"keys": ["ctrl+enter"], "command": "build" },
+	// for CFG
+{ 
+	"keys": ["enter"], 
+	"command": "insert_snippet", 
+	"args": {"name": "Packages/User/ORsnip1.sublime-snippet"}, 
+	"context":
+	[
+		{ 
+			"key": "preceding_text", 
+			"operator": "regex_match", 
+			"operand": "^[a-zA-Z]+\t-> ([a-zA-Z]+( )*)+$", 
+			"match_all": true 
+		}
+
+	]
+},
+
+{ 
+	"keys": ["enter"], 
+	"command": "insert_snippet", 
+	"args": {"contents": "\n| ${1:<OR>}"}, 
+	"context": 
+	[
+		{ 
+			"key": "preceding_text", 
+			"operator": "regex_match", 
+			"operand": "(\t[|] ([a-zA-Z]+( )*)+)", 
+			"match_all": true 
+		}
+
+	]
+},
+
+{ 
+	"keys": ["enter"], 
+	"command": "run_macro_file", 
+	"args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, 
+	"context": 
+	[
+		{
+			"key": "text", 
+			"operator": "regex_match", 
+			"operand": "<OR>", 
+			"match_all": true 
+		}
+	]
+},
+
+{ 
+        "keys": ["ctrl+alt+t"], 
+        "command": "terminus_open", 
+        "args": {
+            "cwd": "ssh decheine@best-linux.cs.wisc.edu",
+        }
+},
+
+/*{
+	"keys": ["ctrl+alt+c"],
+	"command": ""
+}
+/*{ 
+	"keys": ["tab"], 
+	"command": "insert_snippet", 
+	"args": {"contents": "\n\t| ${1:<OR>}"}, 
+	"context":
+	[
+		{ 
+			"key": "preceding_text", 
+			"operator": "regex_match", 
+			"operand": "^\b[a-zA-Z]+\b$/m", 
+			"match_all": true 
+		}
+	]
+}*/
+
+/*,
+{ "keys": ["*"], "command": "insert_snippet", "args": {"contents": "*${0:$SELECTION}*"}, "context":
+	[
+		{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+	]
+},
+{ "keys": ["*"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+	[
+		{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+		{ "key": "following_text", "operator": "regex_contains", "operand": "^\\*", "match_all": true }
+	]
+}*/
+]
