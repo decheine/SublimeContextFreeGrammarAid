@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+ε
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>epsilon</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.cfg</scope> -->
+	<description> epsilon symbol</description>
+</snippet>
+<snippet>
+	<content><![CDATA[
+${1:rule}	-> ${2:production}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rule</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.cfg</scope> -->
+	<description>CFG rule snippet</description>
+</snippet>
