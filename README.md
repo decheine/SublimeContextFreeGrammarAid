@@ -7,4 +7,9 @@ All these files should go in something like
 
 An easier and less elegant way to find this directory is to create a new snippet, and from that file view click "Open File...", and that is this directory.
 
+I also included handy keybindings
+
 This won't be maintained most likely, but it could be useful to maybe that one person.
+
+To trigger the rule snippet, type 'rr<tab>' which should bring up '[rule] -> [production]'
+
